@@ -10,4 +10,9 @@ class UserController extends Controller
      * return collection of all users
      * 
      */
+
+    public function index()
+    {
+        return response()->json("Hello world");
+    }
 }
