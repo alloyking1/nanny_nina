@@ -24,7 +24,12 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'nullable|string',
+            'age' => 'nullable|int|max:255',
+            'sate' => 'nullable|string|max:255',
+            'country' => 'nullable|int|max:255',
+            'code' => 'nullable|int|max:255',
+            'email' => 'nullable|email|max:255',
         ];
     }
 }

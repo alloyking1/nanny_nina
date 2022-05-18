@@ -14,6 +14,17 @@ class UserResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => (string) $this->id,
+            'name' => (string) $this->name,
+            'age' => (int) $this->age,
+            "sate" => (string)$this->sate,
+            "country" => (string)$this->country,
+            "code" => (int)$this->code,
+            "email" => (string) $this->email,
+            "updated_at" => (string)$this->updated_at,
+            "created_at" => (string)$this->created_at,
+            // "channel" => new ChannelResource($this->whenLoaded('channel'))
+        ];
     }
 }
